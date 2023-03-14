@@ -1,0 +1,24 @@
+{% load cms_tags %}
+
+{% block content %}
+    <center>
+        <h1>Postgresql Observer Table</h1>
+        <h2>Django Web Application</h2>
+        <hr/>
+        <table border="1">
+            <tr>
+                <th>Subject ID</th>
+                <th>Name</th>
+                <th>Day</th>
+            </tr>
+            {% for result in data %}
+            <tr>
+                <td>{{result.observer_name}}</td>
+                <td>{{result.subject_number}}</td>
+                <td>{{result.day_number}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+{% endblock content %}
+

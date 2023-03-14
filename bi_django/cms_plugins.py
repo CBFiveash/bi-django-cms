@@ -8,3 +8,9 @@ class HelloPlugin(CMSPluginBase):
     model = CMSPlugin
     render_template = "hello_plugin.html"
     cache = False
+
+@plugin_pool.register_plugin
+class TablePlugin(CMSPluginBase):
+    model = CMSPlugin
+    render_template = "dbtable_plugin.html"
+    cache = False
